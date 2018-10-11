@@ -4,7 +4,7 @@
 var requireConfig;
 var worksheet;
 var start = function(data) {
-    require(['Worksheet'], function(Worksheet) {
+    require(['./Worksheet'], function(Worksheet) {
         worksheet = new Worksheet();
         worksheet.importData(data);
         postMessage({status: 'sharedStrings', data: worksheet.collectSharedStrings()});
